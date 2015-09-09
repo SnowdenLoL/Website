@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+    <head>
+    <title>Pagina de Inicio</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    
+        <script>
+function startTime() {
+    var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    h = checkTime(h);
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('clock').innerHTML = h+":"+m;
+    var t = setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i) {
+    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+        </script>
+        
+    </head>
+
+    <body onload="startTime()">
+        
+        <div id="clock"></div>
+        
+        
+        <div class="sizedcontainer">
+            <!--<p id="helper"> <span class="identifier">-d</span>  &nbsp;&nbsp;DuckDuckGo <br> <span class="identifier">-y</span>  &nbsp;&nbsp;Youtube <br> <span class="identifier">-w</span> &nbsp;&nbsp;Wikipedia <br> <span class="identifier">-4</span>  &nbsp;&nbsp;4chan Board <br> <span class="identifier">-r</span>  &nbsp;&nbsp;Subreddit <br> <span class="identifier">-i</span>  &nbsp;&nbsp;Google Images <br></p>-->
+            <input id="searchinput" type="text" autofocus="autofocus" placeholder="Search" autocomplete="off">
+
+            <div id="common">
+                <ul>
+                <a class="clink" href="http://www.reddit.com/"><li class="clist">r</li></a>
+                <a class="clink" href="https://www.youtube.com/"><li class="clist">y</li></a>
+                <a class="clink" href="https://www.facebook.com/"><li class="clist">f</li></a>
+                <a class="clink" href="https://twitter.com/"><li class="clist">t</li></a>
+                <a class="clink" href="http://www.google.com"><li class="clist">g</li></a>
+                <a class="clink" href="http://arstechnica.co.uk/"><li class="clist">a</li></a>
+                <a class="clink" href="http://steamcommunity.com/"><li class="clist">s</li></a>
+                <a class="clink" href="https://boards.4chan.org/wg/"><li class="clist">4</li></a>
+                </ul>
+            </div>
+            
+<div id="linklist">
+
+    <div id="linkcont1">
+        <h1>Sites</h1>
+            <ul>
+                <a href="https://www.reddit.com/"><li>Reddit</li></a>
+                <a href="http://www.twitch.tv/"><li>Twitch</li></a>
+                <a href="https://www.youtube.com/"><li>YouTube</li></a>
+                <a href="http://www.netflix.com/browse"><li>Netflix</li></a>
+                <a href="http://www.amazon.com/"><li>Amazon</li></a>
+                <a href="http://www.ebay.com/"><li>eBay</li></a>
+                <a href="http://www.mercadolibre.com.pe/"><li>Mercadolibre</li></a>
+                
+            </ul>
+    </div>
+
+    <div id="linkcont2">
+        <h1>Social</h1>
+            <ul>
+                <a href="https://www.facebook.com/"><li>Facebook</li></a>
+                <a href="https://twitter.com/"><li>Twitter</li></a>
+                <a href="https://instagram.com/"><li>Instagram</li></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox"><li>Gmail</li></a>
+                <a href="https://login.live.com/login.srf?wa=wsignin1.0&ct=1438692217&rver=6.1.6206.0&sa=1&ntprob=-1&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fmail.live.com%2F%3Fowa%3D1%26owasuffix%3Dowa%252f&id=64855&snsc=1&cbcxt=mail"><li>Outlook</li></a>
+            </ul>
+    </div>
+
+    <div id="linkcont3">
+        <h1>4chan</h1>
+            <ul>
+                <a href="https://www.4chan.org/"><li>/+/</li></a>
+                <a href="http://boards.4chan.org/b/"><li>/b/</li></a>
+                <a href="https://boards.4chan.org/a/"><li>/a/</li></a>
+                <a href="https://boards.4chan.org/w/"><li>/w/</li></a>
+                <a href="http://boards.4chan.org/v/"><li>/v/</li></a>
+                <a href="https://boards.4chan.org/wg/"><li>/wg/</li></a>
+                <a href="http://boards.4chan.org/s/"><li>/s/</li></a>
+                <!-- class="nsfw"-->
+            </ul>
+    </div>
+
+    <div id="linkcont4">
+
+        <h1>News</h1>
+            <ul>
+                <a href="http://www.theguardian.com/uk"><li>The Guardian</li></a>
+                <a href="http://uk.reuters.com/"><li>Reuters UK</li></a></li>
+                <a href="https://www.rt.com/"><li>RT</li></a>
+                <a href="http://www.aljazeera.com/"><li>Al Jazeera</li></a>
+            </ul>
+    </div>
+
+    <div id="linkcont5">
+
+        <h1>Tech</h1>
+            <ul>
+                <a href="http://www.wired.com/"><li>Wired</li></a>
+                <a href="http://anandtech.com/"><li>AnandTech</li></a>
+                <a href="http://arstechnica.com/"><li>Ars Technica</li></a>
+                <a href="http://pcpartpicker.com/"><li>PCPartPicker</li></a>
+                <a href="http://www.androidcentral.com/"><li>Android Central</li></a>
+                <a href="http://www.androidauthority.com/"><li>Android Auth.</li></a>
+            </ul>
+    </div>
+        </div>
+        <!-- <div id="noise" style="height: 0px;" >
+           <object type="text/html" data="D:\Miscellaneous Files\Startpage\startpage\classic.mp3" width="0" height="0" style="overflow:auto;border:0;visibility:hidden"></object>
+        </div> -->
+
+
+            </div>
+    </body>
+</html>
+
+
+
+
+
+
